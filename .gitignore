@@ -1,0 +1,11 @@
+# binarios
+/bin/
+*.o
+
+# IDE
+/.idea/
+
+# cruft de editores / SO
+*.swp
+*~
+.DS_Store
