@@ -7,25 +7,21 @@ make -s all || exit 1
 pass=0
 fail=0
 for infile in tests/*.in; do
-    algo=$(basename "$infile" .in)
-    expected="tests/$algo.out"
+    case=$(basename "$infile" .in)
+    expected="tests/$case.out"
 
     if [ ! -f "$expected" ]; then
-        echo "SKIP (sin .out): $algo"
+        echo "SKIP (sin .out): $case"
         continue
     fi
 
-    args=""
-    [ -f "tests/$algo.args" ] && args=$(cat "tests/$algo.args")
-
-    # shellcheck disable=SC2086
-    actual=$(./bin/"$algo" $args < "$infile")
+    actual=$(./bin/"$case" < "$infile")
 
     if [ "$actual" = "$(cat "$expected")" ]; then
-        echo "PASS: $algo"
+        echo "PASS: $case"
         pass=$((pass + 1))
     else
-        echo "FAIL: $algo"
+        echo "FAIL: $case"
         diff <(printf '%s\n' "$actual") "$expected" | sed 's/^/    /'
         fail=$((fail + 1))
     fi

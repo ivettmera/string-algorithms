@@ -2,8 +2,9 @@ CXX      := g++
 CXXFLAGS := -O2 -std=c++17 -Wall -Wextra
 BIN      := bin
 ALGOS    := global local semiglobal
+RUN      := $(addprefix run-,$(ALGOS))
 
-.PHONY: all test clean
+.PHONY: all test clean $(RUN)
 
 all: $(addprefix $(BIN)/,$(ALGOS))
 
@@ -15,6 +16,9 @@ $(BIN):
 
 test: all
 	@bash tests/run.sh
+
+$(RUN): run-%: $(BIN)/%
+	@./$(BIN)/$* < tests/$*.in
 
 clean:
 	rm -rf $(BIN)
