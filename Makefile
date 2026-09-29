@@ -1,7 +1,7 @@
 CXX      := g++
 CXXFLAGS := -O2 -std=c++17 -Wall -Wextra
 BIN      := bin
-ALGOS    := global local semiglobal
+ALGOS    := global local semiglobal linear-space general-gap affine-gap
 RUN      := $(addprefix run-,$(ALGOS))
 
 .PHONY: all test clean $(RUN)

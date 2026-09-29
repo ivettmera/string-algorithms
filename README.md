@@ -35,7 +35,7 @@ Parámetros de score fijos: match `+1`, mismatch `-1`, hueco `-2`.
 
 ```sh
 make test          # compila y corre tests/
-make run-<algo>    # corre un algoritmo con tests/global.in e imprime la output
+make run-<algo>    # corre un algoritmo con tests/global.in e imprime el output
 ```
 
 Editar el `.in` para probar una entrada, regenerar el `.out` con
@@ -49,4 +49,4 @@ Editar el `.in` para probar una entrada, regenerar el `.out` con
 ## To-Do list
 
 - [x] Alineamiento global, local y semiglobal (Setubal & Meidanis 1997, §3.2)
-- [ ] Espacio lineal, gaps afines y generales (Setubal & Meidanis 1997, §3.3)
+- [x] Espacio lineal, gaps afines y generales (Setubal & Meidanis 1997, §3.3)
