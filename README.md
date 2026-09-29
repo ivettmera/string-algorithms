@@ -50,3 +50,6 @@ Editar el `.in` para probar una entrada, regenerar el `.out` con
 
 - [x] Alineamiento global, local y semiglobal (Setubal & Meidanis 1997, §3.2)
 - [x] Espacio lineal, gaps afines y generales (Setubal & Meidanis 1997, §3.3)
+- [ ]  (Setubal & Meidanis 1997, §8.1)
+- [ ]  (Sanfoff , §3)
+- [ ] adelanto del informe
