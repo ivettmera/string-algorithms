@@ -78,7 +78,7 @@ void align(int i, int j, char st) {
         while (c(i, j) != a(i - k, j) + w(k) and
                 c(i, j) != b(i - k, j) + w(k)) k++;
 
-        nst = (c(i, j) == a(i - k, j) + w(k)) ? 'a' : 'b';for (int t = j - k + 1; t <= j; t++) { ax += '-'; ay += y[t]; }
+        nst = (c(i, j) == a(i - k, j) + w(k)) ? 'a' : 'b';
         align(i - k, j, nst);
         for (int t = i - k + 1; t <= i; t++) { ax += x[t]; ay += '-'; }
     }
